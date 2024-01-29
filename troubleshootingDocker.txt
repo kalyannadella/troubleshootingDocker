@@ -1,0 +1,862 @@
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS                  NAMES
+befaf61f6916   nginx          "/docker-entrypoint.…"   17 minutes ago   Up 16 minutes              80/tcp                 chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 7 hours ago                          strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 7 hours ago   80/tcp                 clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker inspect befaf61f6916
+[
+    {
+        "Id": "befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8",
+        "Created": "2024-01-29T15:55:25.046992988Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 772,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-01-29T15:56:35.529621252Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:a8758716bb6aa4d90071160d27028fe4eaee7ce8166221a97d30440c8eac2be6",
+        "ResolvConfPath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/hostname",
+        "HostsPath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/hosts",
+        "LogPath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8-json.log",
+        "Name": "/chini",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                30,
+                120
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12-init/diff:/var/lib/docker/overlay2/e1e94ae81cfb177d6b3f933d8735d59ce4960c70d11060bd9fe663df610d0f6a/diff:/var/lib/docker/overlay2/2d6d68c33e92ea196f1ed5a37fbba73046e670e3d7379a90ade0fb8ddcf6e925/diff:/var/lib/docker/overlay2/ac6c142885089f0439afdd3033eb8b3f36c4d96863bc88f5bbf039311e0a99be/diff:/var/lib/docker/overlay2/492362b4f68f5f4e3580ee800c16a1d6386cdd33723225cbe3feab4421f0a572/diff:/var/lib/docker/overlay2/5a636727ea5a1b6c7eb5a6a7ebe421c7c586e77f456426dec151021ca2e42866/diff:/var/lib/docker/overlay2/1e26f8932c73b6f112cd7ba282f3b7c520a4cf4109893c6121669e47142cbb90/diff:/var/lib/docker/overlay2/0723bc86ec10e11aa7c56f368e3e227ebb472119ff9e66bc62bec0f11c6b8d41/diff",
+                "MergedDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12/merged",
+                "UpperDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12/diff",
+                "WorkDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "befaf61f6916",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.25.3",
+                "NJS_VERSION=0.8.2",
+                "PKG_RELEASE=1~bookworm"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "desktop.docker.io/wsl-distro": "Ubuntu-20.04",
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "68898a8326212e8ffa3070e39c28f6c7724cf65ad3facfb7aa53619da1492459",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/68898a832621",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "259dbd9a8b2975714bf57408690cca5479ee365b985e6bfb95be212233923363",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "NetworkID": "940f919429f0c690efb28c96fe128b7d2b84b8a2e7ffe38e0f2f52fea15eab8e",
+                    "EndpointID": "259dbd9a8b2975714bf57408690cca5479ee365b985e6bfb95be212233923363",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+chinni@DESKTOP-PHHR02T:~$ docker network create jenkins
+cf50992ae54aa8a7e6f3f6a4e968538be1a484e5366082ff17c893c4c9713257
+chinni@DESKTOP-PHHR02T:~$ docker run --name jenkins-docker --rm --detach ^
+ivileged --network jenkins --network-alias docker ^
+  --env DOCKER_TLS_CERTDIR=/certs ^
+  --volume jenkins-docker-certs:/certs/client ^
+  --volume jenkins-data:/var/jenkins_home ^
+  --publish 2376:2376 ^
+  docker:dinddocker: invalid reference format.
+See 'docker run --help'.
+chinni@DESKTOP-PHHR02T:~$   --privileged --network jenkins --network-alias docker ^
+--privileged: command not found
+chinni@DESKTOP-PHHR02T:~$   --env DOCKER_TLS_CERTDIR=/certs ^
+--env: command not found
+chinni@DESKTOP-PHHR02T:~$   --volume jenkins-docker-certs:/certs/client ^
+--volume: command not found
+chinni@DESKTOP-PHHR02T:~$   --volume jenkins-data:/var/jenkins_home ^
+--volume: command not found
+chinni@DESKTOP-PHHR02T:~$   --publish 2376:2376 ^
+--publish: command not found
+chinni@DESKTOP-PHHR02T:~$ docker inspect befaf61f6916
+[
+    {
+        "Id": "befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8",
+        "Created": "2024-01-29T15:55:25.046992988Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 772,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-01-29T15:56:35.529621252Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:a8758716bb6aa4d90071160d27028fe4eaee7ce8166221a97d30440c8eac2be6",
+        "ResolvConfPath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/hostname",
+        "HostsPath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/hosts",
+        "LogPath": "/var/lib/docker/containers/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8/befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8-json.log",
+        "Name": "/chini",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                30,
+                120
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12-init/diff:/var/lib/docker/overlay2/e1e94ae81cfb177d6b3f933d8735d59ce4960c70d11060bd9fe663df610d0f6a/diff:/var/lib/docker/overlay2/2d6d68c33e92ea196f1ed5a37fbba73046e670e3d7379a90ade0fb8ddcf6e925/diff:/var/lib/docker/overlay2/ac6c142885089f0439afdd3033eb8b3f36c4d96863bc88f5bbf039311e0a99be/diff:/var/lib/docker/overlay2/492362b4f68f5f4e3580ee800c16a1d6386cdd33723225cbe3feab4421f0a572/diff:/var/lib/docker/overlay2/5a636727ea5a1b6c7eb5a6a7ebe421c7c586e77f456426dec151021ca2e42866/diff:/var/lib/docker/overlay2/1e26f8932c73b6f112cd7ba282f3b7c520a4cf4109893c6121669e47142cbb90/diff:/var/lib/docker/overlay2/0723bc86ec10e11aa7c56f368e3e227ebb472119ff9e66bc62bec0f11c6b8d41/diff",
+                "MergedDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12/merged",
+                "UpperDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12/diff",
+                "WorkDir": "/var/lib/docker/overlay2/279d74d35dc20b494658f4f3bd1236d148416702c46a917cc22c8acae5cd2c12/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "befaf61f6916",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.25.3",
+                "NJS_VERSION=0.8.2",
+                "PKG_RELEASE=1~bookworm"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "desktop.docker.io/wsl-distro": "Ubuntu-20.04",
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "68898a8326212e8ffa3070e39c28f6c7724cf65ad3facfb7aa53619da1492459",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/68898a832621",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "259dbd9a8b2975714bf57408690cca5479ee365b985e6bfb95be212233923363",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "NetworkID": "940f919429f0c690efb28c96fe128b7d2b84b8a2e7ffe38e0f2f52fea15eab8e",
+                    "EndpointID": "259dbd9a8b2975714bf57408690cca5479ee365b985e6bfb95be212233923363",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+chinni@DESKTOP-PHHR02T:~$ docker container  run -name always-policy --restart always alpine sleep 10
+unknown shorthand flag: 'n' in -name
+See 'docker container run --help'.
+chinni@DESKTOP-PHHR02T:~$ docker run -name always-policy --restart always alpine sleep 10
+unknown shorthand flag: 'n' in -name
+See 'docker run --help'.
+chinni@DESKTOP-PHHR02T:~$ docker run --name always-policy --restart always alpine sleep 10
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+4abcf2066143: Pull complete
+Digest: sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
+Status: Downloaded newer image for alpine:latest
+dchinni@DESKTOP-PHHR02T:~$ docker ps _a
+"docker ps" accepts no arguments.
+See 'docker ps --help'.
+
+Usage:  docker ps [OPTIONS]
+
+List containers
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS
+  NAMES
+bccc9d577a8b   alpine         "sleep 10"               32 seconds ago   Up 7 seconds
+  always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   42 minutes ago   Up 41 minutes              80/tcp
+  chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 7 hours ago
+  strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 7 hours ago   80/tcp
+  clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+^[[ACONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS
+      NAMES
+bccc9d577a8b   alpine         "sleep 10"               57 seconds ago   Up Less than a second
+  always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   43 minutes ago   Up 41 minutes              80/tcp
+  chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 7 hours ago
+  strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 7 hours ago   80/tcp
+  clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+^[[A
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                     PORTS
+      NAMES
+bccc9d577a8b   alpine         "sleep 10"               About a minute ago   Up 3 seconds
+      always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   43 minutes ago       Up 42 minutes              80/tcp
+      chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago           Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago           Exited (255) 7 hours ago
+      strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago           Exited (255) 7 hours ago   80/tcp
+      clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+^[[A
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                     PORTS
+      NAMES
+bccc9d577a8b   alpine         "sleep 10"               About a minute ago   Up 6 seconds
+      always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   43 minutes ago       Up 42 minutes              80/tcp
+      chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago           Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago           Exited (255) 7 hours ago
+      strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago           Exited (255) 7 hours ago   80/tcp
+      clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+^[[A
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                     PORTS
+      NAMES
+bccc9d577a8b   alpine         "sleep 10"               About a minute ago   Up 9 seconds
+      always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   43 minutes ago       Up 42 minutes              80/tcp
+      chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago           Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago           Exited (255) 7 hours ago
+      strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago           Exited (255) 7 hours ago   80/tcp
+      clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+^[[A
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                     PORTS
+      NAMES
+bccc9d577a8b   alpine         "sleep 10"               About a minute ago   Up 2 seconds
+      always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   43 minutes ago       Up 42 minutes              80/tcp
+      chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago           Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago           Exited (255) 7 hours ago
+      strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago           Exited (255) 7 hours ago   80/tcp
+      clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                     PORTS
+      NAMES
+bccc9d577a8b   alpine         "sleep 10"               About a minute ago   Up 5 seconds
+      always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   43 minutes ago       Up 42 minutes              80/tcp
+      chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago           Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago           Exited (255) 7 hours ago
+      strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago           Exited (255) 7 hours ago   80/tcp
+      clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker inspect always-policy
+[
+    {
+        "Id": "bccc9d577a8bfee5ca063ec7baf924b6cf77c05c6ffcdb9dc487bd72996738a5",
+        "Created": "2024-01-29T16:37:41.13576475Z",
+        "Path": "sleep",
+        "Args": [
+            "10"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 3840,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-01-29T16:39:48.668655478Z",
+            "FinishedAt": "2024-01-29T16:39:48.409671754Z"
+        },
+        "Image": "sha256:05455a08881ea9cf0e752bc48e61bbd71a34c029bb13df01e40e3e70e0d007bd",
+        "ResolvConfPath": "/var/lib/docker/containers/bccc9d577a8bfee5ca063ec7baf924b6cf77c05c6ffcdb9dc487bd72996738a5/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/bccc9d577a8bfee5ca063ec7baf924b6cf77c05c6ffcdb9dc487bd72996738a5/hostname",
+        "HostsPath": "/var/lib/docker/containers/bccc9d577a8bfee5ca063ec7baf924b6cf77c05c6ffcdb9dc487bd72996738a5/hosts",
+        "LogPath": "/var/lib/docker/containers/bccc9d577a8bfee5ca063ec7baf924b6cf77c05c6ffcdb9dc487bd72996738a5/bccc9d577a8bfee5ca063ec7baf924b6cf77c05c6ffcdb9dc487bd72996738a5-json.log",
+        "Name": "/always-policy",
+        "RestartCount": 12,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                30,
+                120
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c79a6fd416f64a8073a55d45ecf8f8ad981a40e458415df0168c3b0d5447dd67-init/diff:/var/lib/docker/overlay2/f45d805ad84661a7e31d218de8542cac7bd204750da06fb2fd982988627adcf8/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c79a6fd416f64a8073a55d45ecf8f8ad981a40e458415df0168c3b0d5447dd67/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c79a6fd416f64a8073a55d45ecf8f8ad981a40e458415df0168c3b0d5447dd67/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c79a6fd416f64a8073a55d45ecf8f8ad981a40e458415df0168c3b0d5447dd67/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "bccc9d577a8b",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sleep",
+                "10"
+            ],
+            "Image": "alpine",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "desktop.docker.io/wsl-distro": "Ubuntu-20.04"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "cfe74d2db6211827bb37a0cc84e2e744b60b6b5b58af488914fbc870f3b1c96e",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/cfe74d2db621",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "bdb26e371565c0e6eacc5b79b5863c01cd14e3e14e4c6553f3bc8024c51de858",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.3",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:03",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "NetworkID": "940f919429f0c690efb28c96fe128b7d2b84b8a2e7ffe38e0f2f52fea15eab8e",
+                    "EndpointID": "bdb26e371565c0e6eacc5b79b5863c01cd14e3e14e4c6553f3bc8024c51de858",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS
+  NAMES
+bccc9d577a8b   alpine         "sleep 10"               3 minutes ago    Up 9 seconds
+  always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   45 minutes ago   Up 44 minutes              80/tcp
+  chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 8 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 8 hours ago
+  strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 8 hours ago   80/tcp
+  clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker stop n=int(input())
+for i in range(n):
+    l.append(i)
+print(sorted(l))
+    -bash: syntax error near unexpected token `('
+chinni@DESKTOP-PHHR02T:~$ l=[]
+chinni@DESKTOP-PHHR02T:~$ for i in range(n):
+-bash: syntax error near unexpected token `('
+chinni@DESKTOP-PHHR02T:~$     l.append(i)
+-bash: syntax error near unexpected token `i'
+chinni@DESKTOP-PHHR02T:~$ print(sorted(l))
+-bash: syntax error near unexpected token `sorted'
+chinni@DESKTOP-PHHR02T:~$     docker stop bccc9d577a8b
+bccc9d577a8b
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS
+   NAMES
+bccc9d577a8b   alpine         "sleep 10"               4 minutes ago    Exited (0) 27 seconds ago
+   always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   46 minutes ago   Up 45 minutes               80/tcp
+   chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 8 hours ago    0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 8 hours ago
+   strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 8 hours ago    80/tcp
+   clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker start
+"docker start" requires at least 1 argument.
+See 'docker start --help'.
+
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+Start one or more stopped containers
+chinni@DESKTOP-PHHR02T:~$ systemctl restart docker
+Failed to restart docker.service: Interactive authentication required.
+See system logs and 'systemctl status docker.service' for details.
+chinni@DESKTOP-PHHR02T:~$ docker start bccc9d577a8b
+bccc9d577a8b
+chinni@DESKTOP-PHHR02T:~$ systemctl restart docker
+Failed to restart docker.service: Interactive authentication required.
+See system logs and 'systemctl status docker.service' for details.
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS
+  NAMES
+bccc9d577a8b   alpine         "sleep 10"               6 minutes ago    Up Less than a second
+  always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   49 minutes ago   Up 47 minutes              80/tcp
+  chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 8 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 8 hours ago
+  strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 8 hours ago   80/tcp
+  clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                     PORTS
+  NAMES
+bccc9d577a8b   alpine         "sleep 10"               7 minutes ago    Up 8 seconds
+  always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   49 minutes ago   Up 48 minutes              80/tcp
+  chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 8 hours ago   0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 8 hours ago
+  strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 8 hours ago   80/tcp
+  clever_albattani
+chinni@DESKTOP-PHHR02T:~$ docker  run --name unless-stopped-policy --restart on-failure alpine sleep 10
+chinni@DESKTOP-PHHR02T:~$ docker  run --name unless-stopped-policy --restart on-failure alpine sleep 10
+docker: Error response from daemon: Conflict. The container name "/unless-stopped-policy" is already in use by container "f189b6d0691ff5e312dd28eb90cb707940d3d6894406188dbe6bdfd30855314d". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+chinni@DESKTOP-PHHR02T:~$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS
+   NAMES
+f189b6d0691f   alpine         "sleep 10"               28 seconds ago   Exited (0) 14 seconds ago
+   unless-stopped-policy
+bccc9d577a8b   alpine         "sleep 10"               9 minutes ago    Up 1 second
+   always-policy
+befaf61f6916   nginx          "/docker-entrypoint.…"   51 minutes ago   Up 50 minutes               80/tcp
+   chini
+b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 8 hours ago    0.0.0.0:8080->80/tcp   nginx
+9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 8 hours ago
+   strange_jones
+4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 8 hours ago    80/tcp
+   clever_albattani
+chinni@DESKTOP-PHHR02T:~$
