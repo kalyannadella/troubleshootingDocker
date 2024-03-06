@@ -4,7 +4,7 @@ befaf61f6916   nginx          "/docker-entrypoint.…"   17 minutes ago   Up 16 
 b70275a90ddc   nginx          "/docker-entrypoint.…"   2 days ago       Exited (255) 7 hours ago   0.0.0.0:8080->80/tcp   nginx
 9929f51a6443   ubuntu         "top"                    2 days ago       Exited (255) 7 hours ago                          strange_jones
 4100b2a668b7   httpd:latest   "httpd-foreground"       2 days ago       Exited (255) 7 hours ago   80/tcp                 clever_albattani
-chinni@DESKTOP-PHHR02T:~$ docker inspect befaf61f6916
+chinni@DESKTOP-PHHR02T:~$ docker inspect befaf61f691
 [
     {
         "Id": "befaf61f6916b36662012a0c057b7e041df6de80324110d3a1bb1486be670fc8",
